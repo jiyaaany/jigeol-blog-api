@@ -1,10 +1,17 @@
 from flask.globals import request
 from flask_restful import Resource
 from models import PostModel, db
+import pandas, json, datetime
 
 class Post(Resource):
   def get(self, post_idx):
-    return {"method": "get"}
+    query = db.session.query(PostModel).filter(PostModel.post_idx == post_idx)
+    pandas_query = pandas.read_sql(query.statement, query.session.bind)
+
+    post = json.loads(pandas_query.to_json(orient='records'))
+    print(post[0]['reg_date'])
+    print(post[0]['reg_date'].strftime('%Y-%m-%d %H:%M:%S'))
+    return post
 
   def put(self, post_idx):
     data = request.get_json()
@@ -13,7 +20,7 @@ class Post(Resource):
     
     return {"method": "put"}
 
-  def delete(Self, post_idx):
+  def delete(self, post_idx):
     return {"method": "delete"}
 
 class Posts(Resource):
