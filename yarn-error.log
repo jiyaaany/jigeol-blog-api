@@ -1,0 +1,36 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add postraphile
+
+PATH: 
+  C:\Users\jiyaaany\Documents\toy\flask\jigeol-blog-api\env\Scripts;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Program Files\OpenJDK\openjdk-8u275-b01\bin;C:\tools\php80;C:\ProgramData\ComposerSetup\bin;C:\Program Files (x86)\Yarn\bin\;C:\Gradle\gradle-6.1\bin;C:\Users\jiyaaany\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\jiyaaany\AppData\Local\Programs\Python\Python39\;C:\Users\jiyaaany\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\jiyaaany\AppData\Local\Programs\Python\Python39\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\jiyaaany\AppData\Local\Microsoft\WindowsApps;C:\Users\jiyaaany\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\jiyaaany\AppData\Roaming\npm;C:\Users\jiyaaany\AppData\Local\Android\Sdk\platform-tools;C:\tools\Cmder;C:\Users\jiyaaany\AppData\Roaming\Composer\vendor\bin;C:\Users\jiyaaany\AppData\Local\Yarn\bin;
+
+Yarn version: 
+  1.22.5
+
+Node version: 
+  15.4.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/postraphile: Not found
+      at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:66097:18)
+      at Request.self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:140749:22)
+      at Request.emit (node:events:376:20)
+      at Request.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141721:10)
+      at Request.emit (node:events:376:20)
+      at IncomingMessage.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141643:12)
+      at Object.onceWrapper (node:events:482:28)
+      at IncomingMessage.emit (node:events:388:22)
+      at endReadableNT (node:internal/streams/readable:1295:12)
+      at processTicksAndRejections (node:internal/process/task_queues:80:21)
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
