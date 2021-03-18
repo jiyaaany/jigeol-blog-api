@@ -54,6 +54,7 @@ class Posts(Resource):
         db.session.add(post)
         db.session.commit()
 
+        #psycopg2.errors.ForeignKeyViolation
         return {
           'status': 200,
           'message': '저장되었습니다.'
