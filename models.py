@@ -39,7 +39,7 @@ class PostModel(db.Model):
     self.content = content
     self.user_idx = user_idx
 
-class Comment(db.Model):
+class CommentModel(db.Model):
   __tablename__ = 'comment'
 
   comment_idx = db.Column(db.Integer, primary_key=True, autoincrement=True)
@@ -48,3 +48,8 @@ class Comment(db.Model):
 
   user_idx = db.Column(db.Integer, db.ForeignKey('user.user_idx'), nullable=False)
   post_idx = db.Column(db.Integer, db.ForeignKey('post.post_idx'), nullable=False)
+
+  def __init__(self, content, user_idx, post_idx):
+    self.content = content
+    self.user_idx = user_idx
+    self.post_idx = post_idx
