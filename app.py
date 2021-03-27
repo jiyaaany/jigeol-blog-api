@@ -4,7 +4,7 @@ from models import db
 from flask import Flask
 from flask_restful import reqparse, abort, Api, Resource
 from flask_cors import CORS
-from post import Post, Posts
+from post import Post
 from comment import Comment
 from user import UserApi
 import configparser
@@ -26,9 +26,8 @@ db.create_all()
 
 api = Api(app)
 
-api.add_resource(Post, '/posts/<int:post_idx>')
-api.add_resource(Posts, '/posts')
-api.add_resource(Comment, '/comment')
+api.add_resource(Post, '/posts', '/posts/<int:post_idx>')
+api.add_resource(Comment, '/comments', '/comments/<int:post_idx>')
 api.add_resource(UserApi, '/users')
 
 if __name__ == '__main__':
