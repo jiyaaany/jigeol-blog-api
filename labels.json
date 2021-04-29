@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Priority: Critical",
+        "color": "A50000",
+        "description": "우선순위 긴급"
+    },
+    {
+        "name": "Priority: High",
+        "color": "FF0000",
+        "description": "우선순위 상"
+    },
+    {
+        "name": "Priority: Medium",
+        "color": "FF7E7E",
+        "description": "우선순위 중"
+    },
+    {
+        "name": "Priority: Low",
+        "color": "FFB85A",
+        "description": "우선순위 하"
+    },
+    {
+        "name": "Status: To Do",
+        "color": "9FC93C",
+        "description": "처리해야 하는 이슈"
+    },
+    {
+        "name": "Type: Bugfix/Function",
+        "color": "F15F5F",
+        "description": "버그픽스"
+    },
+    {
+        "name": "Type: Feature/Function",
+        "color": "B2EBF4",
+        "description": "새로운 기능 및 개선사항"
+    }
+]

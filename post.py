@@ -29,6 +29,15 @@ class Post(Resource):
         pandas_query = pandas.read_sql(query.statement, query.session.bind)
         posts = json.loads(pandas_query.to_json(orient='records'))
 
+        # query = db.session.query(CommentModel).filter(CommentModel.post_idx == comment_data['post_idx']).order_by(CommentModel.reg_date)
+        # pandas_query = pandas.read_sql(query.statement, query.session.bind)
+        # comments = json.loads(pandas_query.to_json(orient='records'))
+
+        # for comment in comments:
+        #     comment['reg_date'] = str(datetime.fromtimestamp(comment['reg_date']/1000))
+
+        # return comments if comments else []
+
         for post in posts:
           post['reg_date'] = str(datetime.fromtimestamp(post['reg_date']/1000))
 
@@ -71,8 +80,7 @@ class Post(Resource):
     }
 
   def delete(self, post_idx):
-    post = db.session.query(PostModel).filter(
-        PostModel.post_idx == post_idx).first()
+    post = db.session.query(PostModel).filter(PostModel.post_idx == post_idx).first()
     db.session.delete(post)
     db.session.commit()
 
